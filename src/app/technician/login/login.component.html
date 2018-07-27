@@ -1,0 +1,27 @@
+<div class="grid-item">
+    <img src="../assets/diamond.png" class="logo">
+
+    <p>Benvenuto,
+      <br>
+      effettua il login per continuare
+      <br>
+      su <strong class="bold">Remote Guidance</strong>
+    </p>
+
+    <form (ngSubmit)="login()">
+          <div class="icon">
+              <i class="fa fa-user"></i>
+              <input type="text" [(ngModel)]='loginData.username' name="username" placeholder="Il tuo username.." required>
+          </div>
+
+          <div class="icon">
+              <i class="fas fa-lock"></i>
+              <input type="password"  [(ngModel)]='loginData.password' name="password" placeholder="La tua password.." required>
+          </div>
+
+          <input type="submit" class="loginButton" value="Sign In">
+
+    </form>
+
+    <a href="#" class="lost">Password lost?</a>
+</div>

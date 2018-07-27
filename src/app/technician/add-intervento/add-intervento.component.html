@@ -1,0 +1,33 @@
+<div class="wrapper">
+
+  <div class='topBar'>
+    <a class='cancel' (click)='cancel()'>Cancel</a>
+    <button class='save' form="ngForm">Save</button>
+  </div>
+ <hr>
+  <h1>Aggiungi intervento</h1>
+
+    <form (ngSubmit)="save()" id="ngForm" #documentEditForm="ngForm"z>
+
+      <div class='form'>
+        <input  class='input' type='text' name='title' [(ngModel)]='intervento.title'  placeholder="Titolo">
+        <textarea  type="desc" placeholder="Descrizione dell'intervento"  name="description" [(ngModel)]='intervento.description'></textarea>
+        <input  class='input' type='date' placeholder="Seleziona una data" name='date' [(ngModel)]='intervento.date' >
+        <input class='input' type='number' placeholder="Inserisci la durata in ore (3.5)" name='duration' [(ngModel)]='intervento.duration'>
+      </div>
+
+      <h2>Media</h2>
+      <sub>Upload photo, video or document</sub>
+     <!-- <input class='button' type="file" name="file" accept="" multiple  (change)="upload($event)" />  -->
+     <label class="custom-file-upload">
+        <input type="file" accept='image/* , video/*, audio/*, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document' multiple (change)='upload($event)'/>
+        <i class="fas fa-upload"></i> Select files
+    </label>
+
+    </form>
+
+    <p  name='nFiles' ngDefaultControl>{{nFiles}} files selected</p>
+
+
+
+</div>

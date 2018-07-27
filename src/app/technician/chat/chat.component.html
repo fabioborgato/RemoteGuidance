@@ -1,0 +1,56 @@
+
+<app-top-nav></app-top-nav>
+<div class="container">
+    <div class="header">
+      <h1 class=""><span class="blu">{{nChat}}</span> Chat</h1>
+    </div>
+    <hr class="lightGray">
+
+    <div *ngIf='nChat == 0'>
+        <h3>Nessuna chat al momento..</h3>
+    </div>
+
+    <div class="grid">
+
+        <div class="users" *ngFor="let conversation of conversations; let i = index" [attr.data-index]="i" (click)="onTapped($event, i)" >
+            <div class="user">
+              <div class="userProfilePhoto">
+                  <img class="userPhoto" src="./assets/user.png">
+              </div>
+              <div>
+                  <p class="name">{{conversation.partecipants}}</p>
+                  <p class="message">{{conversation.lastMessage}}</p>
+              </div>
+            </div>
+            <!-- <div *ngIf='nChat > 1'>
+                <hr class="darkGray">
+            </div> -->
+
+        </div>
+
+        <div class="messaggi hidden">
+
+                <div class="topbar">
+                    <div class="selectedUser">
+                        <img class="selectedUserPhoto" src="./assets/user.png">
+                    </div>
+                    <span class="username">Username</span>
+
+                    <div class="technicians">
+                        <img class="userPhoto margin" src="./assets/user.png">
+                        <img class="userPhoto margin" src="./assets/user.png">
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-video"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="chatContent">
+
+                </div>
+        </div>
+    </div>
+
+
+</div>

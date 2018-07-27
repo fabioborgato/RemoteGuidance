@@ -1,0 +1,106 @@
+.header {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-content: center;
+  align-items: center;
+  margin: 10px 0 0 0;
+  height: 50px;
+}
+
+hr {
+  margin: 0;
+  border: 1px solid #f8f8f8;
+}
+
+.users {
+  text-align: center;
+  margin-left: -25px;
+}
+
+.user {
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
+.userImage {
+    width: 35px;
+    height: 35px;
+}
+
+.chat {
+  margin: 1em 5px 3.5em 0px;
+}
+
+.message {
+  padding: 5px;
+}
+
+.messageBox {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left:auto;
+  margin-right:-5px;
+  max-width: 60%;
+}
+.messageBoxOperator {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right:auto;
+    margin-left:0;
+    max-width: 60%;
+}
+
+
+
+.messageText {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 200;
+  color: darkgray;
+  margin: 0;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: 85% auto;
+  align-items: center;
+  text-align: center;
+  background-color: lightgray;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin-left: -10px;
+}
+
+::placeholder {
+  font-size: 14px;
+  color: darkgray;
+  margin: 5px 10px 5px 10px;
+}
+
+.text {
+  margin: 10px;
+  padding-left: 10px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 30px;
+  width: auto;
+  font-size: 14px;
+  outline: none;
+  color: black;
+
+}
+
+.send {
+
+}

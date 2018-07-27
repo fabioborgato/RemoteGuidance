@@ -1,0 +1,45 @@
+
+<app-top-nav></app-top-nav>
+<div class="interventi">
+    <div class="header">
+      <h1><span class="blu">{{nInterventi}}</span> Interventi terminati</h1>
+      <i class="fas fa-plus addIcon" (click)='onAddIntervento()'></i>
+    </div>
+    <hr>
+
+    <mat-card class="topSpace" *ngFor="let intervento of interventi; let i = index" [attr.data-index]="i" (click)="onTapped($event, i)">
+    <div class="interventi-item">
+
+              <div class="video hidden">
+                <img class="imag" src="./assets/user.png">
+              </div>
+
+              <div class="content">
+
+                  <h2 class="title">{{intervento.title}}</h2>
+                  <mat-card-content>
+                       <p class="desc">{{intervento.description}}</p>
+                  </mat-card-content>
+                  <div class="bottomBar">
+                          <div>
+                              <div class='inline' *ngFor="let tecnico of intervento.tecniciSede">
+                                  <img class="imag img-small" src="./assets/user.png">
+                                  <!-- <p>{{tecnico}}</p> -->
+                              </div>
+                              <div class='inline' *ngFor="let tecnico of intervento.tecniciCampo">
+                                <img class="imag img-small" src="./assets/user.png">
+                                 <!-- <p>{{tecnico}}</p> -->
+                              </div>
+                          </div>
+
+                          <div class='datetime'>{{intervento.date}}</div>
+                          <div class='hidden'></div>
+                          <div class='hidden'><i class="fas fa-info-circle"></i></div>
+                          <div class='hidden'><i class="fas fa-angle-right"></i></div>
+                  </div>
+              </div>
+
+    </div>
+  </mat-card>
+
+</div>

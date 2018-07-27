@@ -1,0 +1,37 @@
+<div class="grid-item">
+      <img src="../assets/diamond.png" class="logo">
+
+      <p>Benvenuto,
+        <br>
+        registrati per continuare
+        <br>
+        su <strong class="bold">Remote Guidance.</strong>
+      </p>
+
+      <form (ngSubmit)='signup()'>
+              <div class="icon">
+                  <i class="fas fa-user"></i>
+                  <input type="text" [(ngModel)]='signupData.username' name="username" placeholder="Il tuo nome.." required minlength="3">
+              </div>
+
+              <div class="icon">
+                  <i class="fa fa-envelope"></i>
+                  <input type="email" [(ngModel)]='signupData.email' name="email" placeholder="La tua email.." required minlength="5">
+              </div>
+
+              <div class="icon">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" [(ngModel)]='signupData.password' name="password" placeholder="La tua password.." required minlength="6">
+              </div>
+
+              <div class="icon">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" [(ngModel)]='passwordRepeat' name="passwordRepeat" placeholder="Repeat password" required minlength="6">
+              </div>
+
+              <input type="submit" value="Sign Up" class="button blu">
+      </form>
+
+      <a routerLink="/auth/user/login" routerLinkActive="active" class="button gray">Already have a profile?</a>
+
+</div>

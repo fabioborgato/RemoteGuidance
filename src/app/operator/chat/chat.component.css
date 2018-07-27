@@ -1,0 +1,128 @@
+.container {
+  margin-top:162px;
+}
+
+
+.header {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+}
+
+.header > h1 {
+  margin-bottom: 10px;
+}
+
+.blu {
+  color: #49a5a5;
+}
+
+.startVideochat {
+  text-align: right;
+  color: #49a5a5;
+  font-size: 18px;
+}
+
+.lightGray {
+  margin: 0;
+  border: 1px solid #f8f8f8;
+}
+
+.darkGray {
+  margin: 0;
+  border: 0.3px solid lightgray;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 33% 1fr;
+}
+
+.tecnici {
+  background-color: #f8f8f8;
+}
+
+.tecnicoOnline {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  align-items: center;
+}
+
+.tecnicoProfilePhoto{
+  text-align: center;
+}
+
+.tecnicoPhoto {
+  width: 40px;
+  height: 40px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 10px 0 10px;
+}
+
+.special {
+  font-size: 15px;
+  color: darkgrey;
+  font-weight: 200;
+  margin: 0 10px 10px 10px;
+}
+
+
+.users {
+  background-color: #f8f8f8;
+}
+
+.user {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  align-items: center;
+}
+
+.userProfilePhoto{
+  text-align: center;
+}
+
+.userPhoto {
+  width: 40px;
+  height: 40px;
+}
+
+.selectedUserPhoto {
+  width: 75px;
+  height: 75px;
+}
+
+
+.name {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 10px 0 10px;
+}
+
+.message {
+  font-size: 15px;
+  color: darkgrey;
+  font-weight: 200;
+  margin: 0 10px 10px 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .container {
+    margin:140px 0 0 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+}

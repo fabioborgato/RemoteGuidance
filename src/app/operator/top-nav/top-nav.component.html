@@ -1,0 +1,42 @@
+<div class="top">
+
+<div class="topNav">
+    <div>
+      <img class="logo" src="./assets/diamond.png">
+    </div>
+    <div class="menu-item hidden">
+      <a routerLink="/user/dashboard/" routerLinkActive="active">Dashboard</a>
+    </div>
+    <div class="menu-item hidden">
+        <a routerLink="/user/chat/" routerLinkActive="active">Chat</a>
+      </div>
+    <div class="menu-item hidden">
+      <a routerLink="/user/resources/" routerLinkActive="active">Risorse</a>
+    </div>
+
+    <div class='hidden'></div>
+
+    <div class="menu-item profile">
+        <div class="hidden">
+            <img class="profile-img" src="{{userInfo.photoURL}}">
+        </div>
+        <div class="profile-name">
+            <p class="slim">Ciao, <strong>{{userInfo.username}}.</strong></p>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-bars menu"></i></button>
+            <div class="dropdown-content">
+              <a routerLink="/user/interventi">Dashboard</a>
+              <a routerLink="/user/chat">Chat</a>
+              <a routerLink="">Risorse</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search">
+  <img src="./assets/search.png" class="fa-search">
+  <input type="text" placeholder="Search questo e quello.." required>
+</div>
+
+</div>

@@ -1,0 +1,174 @@
+.topNav {
+  margin-top : 1em;
+  display: grid;
+  grid-template-columns: 100px 8% 8% 8% 8% auto 15%;
+  grid-gap: 5px;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.topNav .menu-item {
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  color: #9B9B9B;
+  font-size: 16px;
+  margin-top: 1em;
+}
+
+.search input {
+  width: 100%;
+  height: 40px;
+  background: #f8f8f8;
+  color: #9B9B9B;
+  border: none;
+}
+
+.search input {
+  text-indent: 75px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.search .fa-search {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 13px;
+  left: 40px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #9B9B9B;
+  opacity: 1; /* Firefox */
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  text-align: left;
+  align-items: center;
+}
+
+.profile-name {
+  margin-left: 10px;
+}
+
+.menu-item p {
+  margin: 0;
+  text-align: left;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+}
+
+.settings {
+  font-size: 12px;
+}
+
+.slim {
+  font-weight: 100;
+}
+
+
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: -100px;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 15px 15px;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: transparent;}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .top {
+    position: fixed;
+    width: 85%;
+    top:0;
+    padding: 1em 0 1em 0;
+    background-color: white;
+    opacity: 0.98;
+  }
+
+  .topNav {
+    margin-top : 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+    align-content: right;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .menu-item {
+    text-align: right;
+  }
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 45px;
+  align-items: center;
+
+  text-align: right ;
+}
+
+.menu-item p {
+  margin: 0;
+  text-align: right;
+}
+
+.fa-bars {
+  display: inline;
+}
+
+.search {
+  margin-top :10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+
+}

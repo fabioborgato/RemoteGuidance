@@ -1,0 +1,99 @@
+.grid-item {
+  display: grid;
+  width: 60%;
+  height: 40%;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+p {
+  font-size: 40px;
+  margin-top: 20px;
+  font-weight: 100;
+}
+
+.icon {
+  position: relative;
+  color: #9B9B9B;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.icon input {
+  width: 75%;
+  height: 40px;
+  background: #f8f8f8;
+  color: #9B9B9B;
+  border: none;
+  text-indent: 52px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.icon .fa-user , .fa-lock{
+  position: absolute;
+  top: 13px;
+  left: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #9B9B9B;
+  opacity: 0.4; /* Firefox */
+}
+
+
+.bold {
+  font-weight: 700;
+}
+
+.loginButton {
+  margin: 1.5em 0 0 10px;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #49a5a5;
+  text-align: left;
+  font-weight: 600;
+  outline:none;
+}
+
+.loginButton:hover {
+  color: #65C6D5;
+  cursor: pointer;
+}
+
+.lost {
+  margin: 10px 0 0 10px;
+  text-decoration: none;
+  color: #9B9B9B;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .grid-item {
+    display: grid;
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .icon input {
+    width: 100%;
+  }
+
+  p {
+    font-size: 30px;
+    margin-bottom: 0.5em;
+  }
+
+  .lost {
+    font-size: 14px;
+  }
+
+}

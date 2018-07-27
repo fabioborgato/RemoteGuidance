@@ -1,0 +1,63 @@
+
+<app-top-nav-op></app-top-nav-op>
+<div class="container">
+    <div class="header">
+      <h1 class="">Online admins</h1>
+    </div>
+    <hr class="lightGray">
+
+    <div *ngIf='connectedAdmins.length == 0'>
+      <h2>Nessun tecnico online al momento</h2>
+    </div>
+
+    <div class="grid">
+            <div class="tecnici" *ngFor='let admin of connectedAdmins'>
+                <div class="tecnicoOnline" >
+                    <div class="tecnicoProfilePhoto">
+                        <img class="tecnicoPhoto" src="./assets/user.png">
+                    </div>
+                    <div>
+                        <p class="name">{{admin.username}}</p>
+                        <p class="special">Specializzazione</p>
+                    </div>
+                </div>
+                <div *ngIf='!bool'>
+                    <hr class="darkGray">
+                </div>
+
+        </div>
+
+
+        <div class="messaggi hidden">
+
+        </div>
+    </div>
+
+    <div class="header">
+        <h1 class="">Conversazioni attive</h1>
+      </div>
+      <div *ngIf='!isChat'>
+          <h3>Ancora nessuna conversazione..</h3>
+          <textarea class='scrivici' placeholder="Scrivici"></textarea>
+      </div>
+      <div *ngIf='isChat'>
+          <hr class="darkGray">
+      </div>
+
+       <div class="users" *ngFor="let chat of chats; let i = index" [attr.data-index]="i" (click)="onTapped($event, i)" >
+          <div class="user">
+            <div class="userProfilePhoto">
+                <img class="userPhoto" src="./assets/user.png">
+            </div>
+            <div>
+                <p class="name">{{chat.partecipants}}</p>
+                <p class="message">{{chat.lastMessage}}</p>
+            </div>
+          </div>
+          <hr class="darkGray">
+
+      </div>
+
+
+
+</div>

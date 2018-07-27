@@ -1,0 +1,36 @@
+<div class="grid-item">
+    <img src="../assets/diamond.png" class="logo">
+
+    <p>Se vuoi,
+      <br>
+      puoi aggiungere il tuo numero, il nome della tua azienda ed una foto profilo.
+     </p>
+
+    <!-- <p class="sub">Tutte le info saranno vendute ai cinesi</p>  -->
+
+
+    <form (ngSubmit)="completeRegistration()">
+              <div class="icon">
+                  <i class="fas fa-phone"></i>
+                  <input type="number" [(ngModel)]="userData.phone" name="phone" placeholder="Il tuo numero.." minlength="5">
+              </div>
+
+              <div class="icon">
+                  <i class="fas fa-building"></i>
+                  <input type="text" [(ngModel)]="userData.company" name="company" placeholder="La tua azienda.." required>
+              </div>
+
+              <div class="uploadPhoto">
+                  <img *ngIf="downloadURL | async; let downloadSrc" src={{downloadSrc}}  id="photo" class="logo" name="photo" />
+                  <input type="file" id="file" name="file" accept="image/png, image/jpeg"  value="Select a photo" (change)="upload($event)" />
+              </div>
+
+              <input type="submit" value="I'm ready!" class="button">
+    </form>
+
+    <!-- <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
+      File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+  </div> -->
+
+
+</div>

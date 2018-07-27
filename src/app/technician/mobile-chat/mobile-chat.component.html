@@ -1,0 +1,42 @@
+<div class='container'>
+    <div class='header'>
+        <i class="fas fa-arrow-left" (click)='back()'></i>
+        <div class='users'>
+          <p>{{message.partecipants}}</p>
+              <!-- <div class='user'>
+                  <img class="userImage" src='../../../assets/user.png'>
+              </div>
+              <div class='user'>
+                  <img class="userImage" src='../../../assets/user.png'>
+              </div> -->
+        </div>
+    </div>
+    <hr>
+    <div class='chat'>
+      <div class='message' *ngFor='let msg of message.messages'>
+          <div class='messageBox' *ngIf='msg.username == myUsername; else elseblock'>
+              <!-- <h3>{{msg.username}}</h3> -->
+              <p class='messageText'>{{msg.msg}}</p>
+              <p class='date'>{{msg.date}}</p>
+          </div>
+          <ng-template #elseblock>
+              <div class='messageBoxOperator'>
+                  <!-- <h3>{{msg.username}}</h3> -->
+                  <p class='messageText'>{{msg.msg}}</p>
+                  <p class='date'>{{msg.date}}</p>
+              </div>
+          </ng-template>
+      </div>
+
+    </div>
+
+    <form>
+        <div class='keyboard'>
+            <input  required minlength="4" class='text' placeholder="Rispondi.." [(ngModel)]="msg" name="msg">
+            <div class='send'>
+                <i class="fas fa-paper-plane" (click)='send()'></i>
+            </div>
+        </div>
+
+    </form>
+</div>

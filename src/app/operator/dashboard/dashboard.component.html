@@ -1,0 +1,57 @@
+
+<app-top-nav-op></app-top-nav-op>
+
+<div class='wrapper'>
+
+          <div class="grid">
+            <h1 class='hidden'>Ticket</h1>
+            <p>
+              Per richiedere assistenza descrivi brevemente il problema, ti contatteremo il prima possibile.
+            </p>
+
+            <div class="wrap">
+                <form (submit)='ticket()'>
+                    <div class="form">
+                            <textarea class="input"  [(ngModel)]='message' name='message' placeholder="{{userInfo.username}}, descrivi brevemente il problema."></textarea>
+                            <input type="submit" value="Invia" class="button blu">
+                    </div>
+              </form>
+                <div class="planeIcon">
+                    <img src="./assets/send.png" class="send hidden">
+                </div>
+            </div>
+
+          </div>
+
+
+          <div class="interventi">
+            <h1 class=""> Cronologia interventi</h1>
+
+                    <mat-card class="space" >
+                    <div class="interventi-item">
+
+                              <div class="video hidden">
+                                <img class="imag" src="./assets/user.png">
+                              </div>
+
+                              <div class="content">
+
+                                  <h2 class="title">title</h2>
+                                  <p class="desc">ne rhejknkwrfkne rhejknkwr wefrhjnefbwfenfwr jkfwenlwkr wfkne rhejwhwjcbhw jhw cjwbecjhwbecjhwbcjhbwjecbjhwb</p>
+                                  <div class="bottomBar">
+                                      <div>
+                                          <img class="imag img-small" src="./assets/user.png">
+                                          <!-- <p>nome tecnico</p> -->
+                                      </div>
+
+                                      <div>17 Agosto 2018</div>
+
+                                  </div>
+                              </div>
+
+                    </div>
+                  </mat-card>
+
+          </div>
+</div>
+
